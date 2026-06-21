@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#134e4a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="200" height="200" rx="40" fill="url(#bg)"/>
+  <!-- Subtle grid pattern -->
+  <line x1="50" y1="0" x2="50" y2="200" stroke="white" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="100" y1="0" x2="100" y2="200" stroke="white" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="150" y1="0" x2="150" y2="200" stroke="white" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="0" y1="50" x2="200" y2="50" stroke="white" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="0" y1="100" x2="200" y2="100" stroke="white" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="0" y1="150" x2="200" y2="150" stroke="white" stroke-opacity="0.03" stroke-width="1"/>
+  <!-- Shine overlay -->
+  <rect width="200" height="200" rx="40" fill="url(#shine)"/>
+  <!-- Shopping bag body -->
+  <path d="M60 85 L60 150 Q60 160 70 160 L130 160 Q140 160 140 150 L140 85 Q140 80 135 78 L105 65 Q100 63 95 65 L65 78 Q60 80 60 85Z" fill="white" fill-opacity="0.95"/>
+  <!-- Bag handle -->
+  <path d="M82 78 L82 60 Q82 42 100 42 Q118 42 118 60 L118 78" fill="none" stroke="url(#accent)" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+  <!-- Lightning bolt accent -->
+  <path d="M95 100 L105 100 L98 118 L112 118 L92 148 L98 125 L85 125 Z" fill="url(#accent)" filter="url(#glow)"/>
+  <!-- Sparkle dots -->
+  <circle cx="152" cy="52" r="3" fill="#5eead4" opacity="0.8"/>
+  <circle cx="160" cy="65" r="2" fill="#5eead4" opacity="0.5"/>
+  <circle cx="45" cy="48" r="2.5" fill="#5eead4" opacity="0.6"/>
+  <circle cx="38" cy="62" r="1.5" fill="#5eead4" opacity="0.4"/>
+  <!-- Small star sparkle top-right -->
+  <path d="M155 42 L157 38 L159 42 L163 44 L159 46 L157 50 L155 46 L151 44 Z" fill="white" opacity="0.7"/>
+</svg>
